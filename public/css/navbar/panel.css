@@ -1,0 +1,107 @@
+.guilds-navbar .panel {
+    display: flex;
+	align-items: center;
+    justify-content: space-between;  
+	position: fixed;
+    bottom: 0;
+    padding: 0 8px;
+	left: 72px;
+    width: 224px;
+    height: 52px;
+    background: rgba(41, 43, 47, 0.7);
+    backdrop-filter: blur(20px);
+    margin: 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 10px 0 rgb(255, 255, 255, 0.2);
+}
+
+/* User info */
+.guilds-navbar .panel .user-info {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-radius: 4px;
+    width: 60%;
+    cursor: pointer;
+}
+
+.guilds-navbar .panel .user-info:hover {
+    background: var(--navbar-panel-hover-bg)
+}
+
+/* Avatar */
+.guilds-navbar .panel .user-info .avatar {
+    width: 32px;
+	height: 32px;
+	border-radius: 50%;
+    background: grey;
+	object-fit: cover;
+    margin-right: 8px;
+}
+
+.guilds-navbar .panel .user-info .avatar img {
+    width: inherit;
+	border-radius: inherit;
+}
+
+.guilds-navbar .panel .user-info .name {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+/* Username */
+.guilds-navbar .panel .user-info .name .username {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.guilds-navbar .panel .user-info .name .username:empty {
+    height: 14px;
+    background: gray;
+    border-radius: 3px;
+}
+
+/* Tag */
+.guilds-navbar .panel .user-info .name .tag {
+    font-size: 12px;
+    color: #b9bbbe;
+}
+
+.guilds-navbar .panel .user-info .name .tag:empty {
+    margin-top: 5px;
+    height: 10px;
+    width: 70%;
+    background: gray;
+    border-radius: 3px;
+}
+
+/* Button */
+.guilds-navbar .panel .btn-login {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+    width: 32px;
+	height: 32px;
+    padding: 5px;
+	border: 0;
+	border-radius: 4px;
+    background: none;
+	cursor: pointer;
+}
+
+.guilds-navbar .panel .btn-login:hover {
+    background: var(--navbar-panel-hover-bg);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .guilds-navbar .panel {
+        width: calc(100% - 85px);
+    }
+}

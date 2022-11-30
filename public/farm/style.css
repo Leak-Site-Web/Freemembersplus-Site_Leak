@@ -1,0 +1,105 @@
+.guildCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.guildCards .guildCard {
+    margin: 1rem;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    transform: translate(0);
+    box-shadow: none;
+    padding: 1rem 0;
+    cursor: default;
+    user-select: none;
+    cursor: pointer;
+}
+
+.guildCards .guildCard:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+}
+
+/* Head */
+.guildCards .guildCard .head {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.guildCards .guildCard .head .icon {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.guildCards .guildCard .head .icon:has(span) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.guildCards .guildCard .head .icon img {
+    width: 100%;
+    border-radius: inherit;
+}
+
+/* Infos */
+.guildCards .guildCard .infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    padding-top: 1rem;
+}
+
+.guildCards .guildCard .infos .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    /*margin-bottom: 0.5rem;*/
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.guildCards .guildCard .infos .description {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+/* Links */
+/*.guildCards .guildCard .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    bottom: 0;
+}
+
+.guildCards .guildCard .links a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: var(--theme-color2);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.guildCards .guildCard .links a:hover {
+    background: var(--theme-color);
+}*/
