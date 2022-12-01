@@ -1,0 +1,150 @@
+/* Landing */
+.app .landing {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 30px 0;
+}
+
+.app .landing img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: bounce 3s ease-in-out infinite;
+    box-shadow: 0 1px 10px 0 rgb(255, 255, 255, 0.2);
+}
+
+.app .landing span {
+    font-size: 80px;
+    font-weight: 1000;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Links */
+.app .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.app .links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom right, #9333ea, #3b82f6);
+    color: #fff;
+    padding: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin: 8px 12px;
+    width: fit-content;
+}
+
+.app .links a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(17, 24, 39);
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition-duration: 0.15s;
+    width: 100%;
+}
+
+.app .links a:hover span {
+    background-color: rgba(17, 24, 39, 0.5);
+}
+
+/* Wave */
+.app .wave-container .categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme-color);
+    padding: 35px 10%;
+}
+
+.app .wave-container svg {
+    vertical-align: middle;
+}
+
+/* Stats */
+.app .wave-container .categories .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.app .wave-container .categories .stats .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 35px;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+/* Animations */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Media screen */
+@media (max-width: 1500px) {
+    .app .wave-container .categories {
+        flex-direction: column;
+    }
+
+    .app .wave-container .categories img {
+        width: 48rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .app .landing img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .app .landing span {
+        font-size: 50px;
+        margin-top: 15px;
+    }
+
+    .app .links {
+        flex-direction: column;
+        margin: 0 10%;
+    }
+
+    .app .wave-container .categories img {
+        width: 32rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .app .wave-container .categories img {
+        width: 20rem;
+    }
+
+    .app .links {
+        flex-direction: column;
+    }
+}

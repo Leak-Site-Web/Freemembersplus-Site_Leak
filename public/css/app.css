@@ -1,0 +1,158 @@
+:root {
+    --app-bg: #272934;
+    --app-text-color: #f2f4fb;
+    --navbar-bg: #202225;
+    --navbar-panel-hover-bg: rgba(79, 84, 92, 0.6);
+    --navbar-text-color: #dcddde;
+    --theme-color: #5865f2;
+    --theme-color2: #7289da;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--app-bg);
+    color: var(--app-text-color);
+}
+
+/* Navbar */
+.app-navbar {
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+.app-navbar .logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%
+}
+
+.app-navbar .links {
+    display: flex;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.app-navbar .links a {
+    color: #eee;
+    text-decoration: none;
+    min-width: 50px;
+    min-height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.2s ease-in-out
+}
+
+.app-navbar .links a span {
+    width: 0;
+    height: 3px;
+    margin-top: 2px;
+    border-radius: 5px;
+    background: #eee;
+    transition: 0.2s ease-in-out
+}
+
+.app-navbar .links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.app-navbar .links a:hover:not(.active) span {
+    width: 5px
+}
+
+.app-navbar .links a:hover.active span {
+    width: 35px
+}
+
+.app-navbar .links a.active span {
+    width: 30px
+}
+
+/* Loader */
+.modalLoader:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.modalLoader .content {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transition: transform 0.3s ease-out;
+}
+
+.modalLoader .content .spinner {
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 8px solid rgba(0, 0, 0, 0.3);
+    border-top: 8px solid #fff;
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .modalLoader .content .spinner {
+        width: 30%;
+        border-width: 6px;
+    }
+}
+
+/* Scroll bar */
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
